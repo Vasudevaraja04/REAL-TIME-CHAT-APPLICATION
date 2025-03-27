@@ -30,4 +30,4 @@ THIS IS A REAL-TIME CHAT APPLICATION BUILT USING VUE.JS, WEBSOCKETS, HTML, CSS, 
 
 - ### OUTPUT
 
-- ![Image](https://github.com/user-attachments/assets/69b4ef46-b288-4cd2-8b65-338c5577a237)
+![Image](https://github.com/user-attachments/assets/b1cb4578-b881-417e-93eb-c22296e49968)
