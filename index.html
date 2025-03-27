@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="chat-container">
+            <div class="chat-header">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNb-sfIK-bI1mrHaYPDaxeS9zZ-VRkzmT3OQ&s" alt="User">
+                <h2>Chat</h2>
+            </div>
+            <div class="chat-box">
+                <div v-for="msg in messages" :key="msg.id" class="message" :class="{ 'sent': msg.isSent, 'received': !msg.isSent }">
+                    <p>{{ msg.text }}</p>
+                </div>
+            </div>
+            <div class="input-box">
+                <input v-model="newMessage" @keyup.enter="sendMessage" placeholder="Type a message...">
+                <button @click="sendMessage">
+                    <img src="https://cdn.pixabay.com/photo/2021/12/06/22/37/send-icon-6851743_640.png" alt="Send">
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
